@@ -21,6 +21,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "506,72",
     opfølgning: "322,19",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -44,6 +46,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "506,72",
     opfølgning: "322,19",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -67,6 +71,8 @@ const fysioKlikker = [
     parkering: "Betalt",
     førsteKons: "800-1350",
     opfølgning: "600-1000",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -90,6 +96,8 @@ const fysioKlikker = [
     parkering: "Gratis",
     førsteKons: "675",
     opfølgning: "330-675",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -113,6 +121,8 @@ const fysioKlikker = [
     parkering: "Gratis",
     førsteKons: "900",
     opfølgning: "550-700",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -136,6 +146,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "-",
     opfølgning: "-",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -159,6 +171,8 @@ const fysioKlikker = [
     parkering: "Gode muligheder",
     førsteKons: "506,72",
     opfølgning: "322,19",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -182,6 +196,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "475-625",
     opfølgning: "315-625",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -205,6 +221,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "525-650",
     opfølgning: "320-475",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -228,6 +246,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "650",
     opfølgning: "300-500",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -251,6 +271,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "506,72",
     opfølgning: "322,19",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -274,6 +296,8 @@ const fysioKlikker = [
     parkering: "Gratis",
     førsteKons: "300",
     opfølgning: "200",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -297,6 +321,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "506,72",
     opfølgning: "322,19",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -320,6 +346,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "1250",
     opfølgning: "650",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -343,6 +371,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "700-1499",
     opfølgning: "600-1220",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Frederiksberg",
@@ -366,6 +396,8 @@ const fysioKlikker = [
     parkering: "Gode muligheder",
     førsteKons: "506,72",
     opfølgning: "322,19",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Nørrebro",
@@ -389,6 +421,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "506,72",
     opfølgning: "322,19",
+    avgRating: 4.2,
+    ratingCount: 23,
   },
 
   {
@@ -413,6 +447,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "750",
     opfølgning: "650",
+    avgRating: 4.0,
+    ratingCount: 8,
   },
   {
     lokation: "Nørrebro",
@@ -436,6 +472,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "1000",
     opfølgning: "900",
+    avgRating: 5.0,
+    ratingCount: 4,
   },
   {
     lokation: "Nørrebro",
@@ -459,6 +497,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "650-800",
     opfølgning: "450-650",
+    avgRating: 3.6,
+    ratingCount: 43,
   },
   {
     lokation: "Nørrebro",
@@ -482,6 +522,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "1800",
     opfølgning: "900",
+    avgRating: 4.1,
+    ratingCount: 40,
   },
   {
     lokation: "Nørrebro",
@@ -505,6 +547,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "506,72",
     opfølgning: "322,19",
+    avgRating: 4.5,
+    ratingCount: 33,
   },
   {
     lokation: "Amager",
@@ -528,6 +572,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "850",
     opfølgning: "400-650",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Amager",
@@ -551,6 +597,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "650",
     opfølgning: "650",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Amager",
@@ -574,6 +622,8 @@ const fysioKlikker = [
     parkering: "Gratis",
     førsteKons: "550",
     opfølgning: "350-450",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Amager",
@@ -597,6 +647,8 @@ const fysioKlikker = [
     parkering: "Gratis",
     førsteKons: "506,72",
     opfølgning: "322,19",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Amager",
@@ -620,6 +672,8 @@ const fysioKlikker = [
     parkering: "Gratis",
     førsteKons: "Forløb",
     opfølgning: "Forløb",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Amager",
@@ -643,6 +697,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "750-1350",
     opfølgning: "650-1100",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Amager",
@@ -666,6 +722,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "506,72",
     opfølgning: "322,19",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Amager",
@@ -689,6 +747,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "599",
     opfølgning: "-",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Amager",
@@ -712,6 +772,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "595",
     opfølgning: "395",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Amager",
@@ -735,6 +797,8 @@ const fysioKlikker = [
     parkering: "Betalt",
     førsteKons: "850",
     opfølgning: "590-1100",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Amager",
@@ -758,6 +822,8 @@ const fysioKlikker = [
     parkering: "Betalt",
     førsteKons: "900",
     opfølgning: "700",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -781,6 +847,8 @@ const fysioKlikker = [
     parkering: "Gratis",
     førsteKons: "506,72",
     opfølgning: "322,19",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -804,6 +872,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "307,58-550",
     opfølgning: "195,57-405",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -827,6 +897,8 @@ const fysioKlikker = [
     parkering: "Gratis",
     førsteKons: "506,72",
     opfølgning: "322,19",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -850,6 +922,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "800",
     opfølgning: "-",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -873,6 +947,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "506,72",
     opfølgning: "322,19",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -896,6 +972,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "600-800",
     opfølgning: "375-550",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -919,6 +997,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "675",
     opfølgning: "425-625",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -942,6 +1022,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "506,72",
     opfølgning: "322,19",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -965,6 +1047,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "945",
     opfølgning: "745",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -988,6 +1072,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "750",
     opfølgning: "750",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -1011,6 +1097,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "550-695",
     opfølgning: "375-650",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -1034,6 +1122,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "925",
     opfølgning: "650-825",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -1057,6 +1147,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "699",
     opfølgning: "449",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -1080,6 +1172,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "750",
     opfølgning: "450-900",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -1103,6 +1197,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "600-1200",
     opfølgning: "600-1200",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -1126,6 +1222,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "575-950",
     opfølgning: "395-575",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -1149,6 +1247,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "Forløb",
     opfølgning: "Forløb",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -1172,6 +1272,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "695",
     opfølgning: "395",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
   {
     lokation: "Østerbro",
@@ -1195,6 +1297,8 @@ const fysioKlikker = [
     parkering: "-",
     førsteKons: "575-950",
     opfølgning: "395-585",
+    avgRating: 4.0,
+    ratingCount: 40,
   },
 ];
 

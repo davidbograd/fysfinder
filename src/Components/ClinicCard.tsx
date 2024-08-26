@@ -5,8 +5,8 @@ interface Props {
   antalBehandlere: string;
   ydernummer: string;
   førsteKons: string;
-  rating?: number;
-  reviewCount?: number;
+  avgRating: number;
+  ratingCount: number;
 }
 
 const ClinicCard: React.FC<Props> = ({
@@ -14,8 +14,8 @@ const ClinicCard: React.FC<Props> = ({
   antalBehandlere,
   ydernummer,
   førsteKons,
-  rating = 0,
-  reviewCount = 0,
+  avgRating,
+  ratingCount,
 }) => {
   const getYdernummerIcon = () => {
     if (ydernummer === "Ja") return <FaCheck className="text-green-500" />;
@@ -30,8 +30,8 @@ const ClinicCard: React.FC<Props> = ({
       </h2>
       <div className="flex items-center mb-2">
         <FaStar className="text-yellow-400 mr-1" />
-        <span className="text-gray-700 mr-2">{rating.toFixed(1)}</span>
-        <span className="text-gray-500">({reviewCount} anmeldelser)</span>
+        <span className="text-gray-700 mr-2">{avgRating.toFixed(1)}</span>
+        <span className="text-gray-500">({ratingCount} anmeldelser)</span>
       </div>
       <div className="flex justify-between items-center mt-2">
         <p className="text-slate-700">{antalBehandlere} behandlere</p>

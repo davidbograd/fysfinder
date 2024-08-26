@@ -7,9 +7,10 @@ import Breadcrumbs from "./Breadcrumbs";
 
 const SuburbPage: React.FC = () => {
   const { suburb } = useParams<{ suburb: string }>();
-  const clinics = fysioKlikker.filter(
-    (clinic) => slugify(clinic.lokation) === suburb
-  );
+  const clinics = fysioKlikker
+    .filter((clinic) => slugify(clinic.lokation) === suburb)
+    .sort((a, b) => b.avgRating - a.avgRating); // Sort clinics by avgRating in descending order
+
   const suburbName = clinics[0]?.lokation || suburb;
 
   const breadcrumbItems = [
@@ -29,7 +30,14 @@ const SuburbPage: React.FC = () => {
             key={index}
             to={`/${suburb}/clinic/${slugify(clinic.klinikNavn)}`}
           >
-            <ClinicCard {...clinic} />
+            <ClinicCard
+              klinikNavn={clinic.klinikNavn}
+              antalBehandlere={clinic.antalBehandlere}
+              ydernummer={clinic.ydernummer}
+              førsteKons={clinic.førsteKons}
+              avgRating={clinic.avgRating}
+              ratingCount={clinic.ratingCount}
+            />
           </Link>
         ))}
       </div>

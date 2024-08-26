@@ -45,8 +45,10 @@ const ClinicDetailsPage: React.FC = () => {
       <h1 className="text-4xl font-bold mb-2">{clinic.klinikNavn}</h1>
       <div className="flex items-center mb-6">
         <FaStar className="text-yellow-500 mr-2" />
-        <span className="font-bold mr-2">4.8</span>
-        <span className="text-gray-500">(50 anmeldelser)</span>
+        <span className="font-bold mr-2">{clinic.avgRating.toFixed(1)}</span>
+        <span className="text-gray-500">
+          ({clinic.ratingCount} anmeldelser)
+        </span>
       </div>
 
       <div className="mb-6">
