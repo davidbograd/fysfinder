@@ -12,6 +12,7 @@ export default {
       },
       colors: {
         'orange-brand': "#EB433D",
+        'primary-blue': '#1894E0',
       },
     },
   },
