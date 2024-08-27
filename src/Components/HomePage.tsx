@@ -11,6 +11,11 @@ const HomePage: React.FC = () => {
 
   const totalClinics = fysioKlikker.length;
 
+  // Sort suburbs alphabetically
+  const sortedSuburbs = Object.entries(suburbCounts).sort((a, b) =>
+    a[0].localeCompare(b[0], "da")
+  );
+
   return (
     <div>
       <div className="bg-primary-blue text-white py-20 px-0 mb-12">
@@ -25,18 +30,20 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4">
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {Object.entries(suburbCounts).map(([suburb, count]) => (
+      <div className="max-w-4xl mx-auto px-4">
+        <ul className="space-y-4">
+          {sortedSuburbs.map(([suburb, count]) => (
             <li key={suburb}>
               <Link
                 to={`/${slugify(suburb)}`}
-                className="block border p-6 rounded-md hover:shadow-lg transition-shadow duration-200 h-full"
+                className="block border p-6 rounded-md hover:shadow-lg transition-shadow duration-200"
               >
-                <span className="text-2xl font-bold text-slate-800 block mb-2">
-                  {suburb}
-                </span>
-                <span className="text-slate-600">{count} klinikker</span>
+                <div className="flex justify-between items-center">
+                  <span className="text-2xl font-bold text-slate-800">
+                    {suburb}
+                  </span>
+                  <span className="text-slate-600">{count} klinikker</span>
+                </div>
               </Link>
             </li>
           ))}
