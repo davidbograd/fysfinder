@@ -6,7 +6,14 @@ interface GoogleMapProps {
 
 const GoogleMap: React.FC<GoogleMapProps> = ({ address }) => {
   const encodedAddress = encodeURIComponent(address);
-  const apiKey = "AIzaSyAm2SHijsqnRnjdHUd9GVq4tkRqu_s-t8U"; // Replace with your actual API key
+  // The issue here is that 'process.env' is not available in the browser environment by default.
+  // We need to use the 'import.meta.env' syntax for Vite projects to access environment variables.
+  const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+
+  if (!apiKey) {
+    console.error("Google Maps API key is missing");
+    return <div>Map unavailable</div>;
+  }
 
   return (
     <iframe
