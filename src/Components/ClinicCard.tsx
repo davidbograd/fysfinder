@@ -34,13 +34,19 @@ const ClinicCard: React.FC<Props> = ({
         <span className="text-gray-500">({ratingCount} anmeldelser)</span>
       </div>
       <div className="flex justify-between items-center mt-2">
-        <p className="text-slate-700">{antalBehandlere} behandlere</p>
+        <p
+          className={`text-slate-700 ${
+            antalBehandlere === "-" ? "text-gray-300" : ""
+          }`}
+        >
+          {antalBehandlere === "-" ? "?" : antalBehandlere} behandlere
+        </p>
         <div className="flex items-center">
           <span className="mr-2 text-sm">Ydernummer</span>
           {getYdernummerIcon()}
         </div>
       </div>
-      <p className="text-slate-700 mt-2 text-sm">{førsteKons}kr</p>
+      <p className="text-slate-700 mt-2 text-sm">{førsteKons} kr</p>
     </div>
   );
 };

@@ -7,6 +7,7 @@ import { slugify } from "../utils/slugify";
 import Breadcrumbs from "./Breadcrumbs";
 import { FaUser, FaStar, FaMapMarkerAlt, FaGlobe } from "react-icons/fa";
 import joachimImage from "../assets/images/joachimbograd-fysiopuls.png";
+import GoogleMap from "./GoogleMap";
 
 // Define Clinic type inline
 type Clinic = (typeof fysioKlikker)[number];
@@ -39,10 +40,10 @@ const ClinicDetailsPage: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div>
       <Breadcrumbs items={breadcrumbItems} />
 
-      <h1 className="text-4xl font-bold mb-2">{clinic.klinikNavn}</h1>
+      <h1 className="text-3xl font-bold mb-2">{clinic.klinikNavn}</h1>
       <div className="flex items-center mb-6">
         <FaStar className="text-yellow-500 mr-2" />
         <span className="font-bold mr-2">{clinic.avgRating.toFixed(1)}</span>
@@ -191,6 +192,11 @@ const ClinicDetailsPage: React.FC = () => {
             </span>
           </div>
         </div>
+      </div>
+
+      <div className="mb-16">
+        <h2 className="text-2xl font-semibold mb-6">Lokation</h2>
+        <GoogleMap address={`${clinic.adresse}, ${clinic.lokation}`} />
       </div>
     </div>
   );
