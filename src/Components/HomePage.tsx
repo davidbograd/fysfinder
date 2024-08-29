@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
           </h1>
           <p className="text-xl">
             Vi har information fra {totalClinics} danske klinikker. Hvor leder
-            du efter een fys?
+            du efter en fys?
           </p>
         </div>
       </div>
