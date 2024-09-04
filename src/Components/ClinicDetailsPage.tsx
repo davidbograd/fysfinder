@@ -161,15 +161,17 @@ const ClinicDetailsPage: React.FC = () => {
                   </div>
                 </div>
               ))}
+              {therapists.length > 5 && !showAllTherapists && (
+                <div className="flex items-center mb-4">
+                  <button
+                    className="text-blue-600 hover:text-blue-800 underline font-medium mr-4"
+                    onClick={() => setShowAllTherapists(true)}
+                  >
+                    Vis flere
+                  </button>
+                </div>
+              )}
             </div>
-            {therapists.length > 5 && !showAllTherapists && (
-              <button
-                className="text-blue-600 hover:text-blue-800 underline font-medium mt-4 mr-4"
-                onClick={() => setShowAllTherapists(true)}
-              >
-                Vis flere
-              </button>
-            )}
           </>
         ) : (
           <p className="text-gray-600 italic">
