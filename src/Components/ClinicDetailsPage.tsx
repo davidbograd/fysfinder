@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import fysioKlikker from "../clinicsData";
 import IconEmail from "./Icons/IconEmail";
@@ -6,13 +6,13 @@ import IconPhone from "./Icons/IconPhone";
 import { slugify } from "../utils/slugify";
 import Breadcrumbs from "./Breadcrumbs";
 import { FaUser, FaStar, FaMapMarkerAlt, FaGlobe } from "react-icons/fa";
-import joachimImage from "../assets/images/joachimbograd-fysiopuls.png";
 import GoogleMap from "./GoogleMap";
 
 // Define Clinic type inline
 type Clinic = (typeof fysioKlikker)[number];
 
 const ClinicDetailsPage: React.FC = () => {
+  const [showAllTherapists, setShowAllTherapists] = useState(false);
   const { suburb, clinicName } = useParams<{
     suburb: string;
     clinicName: string;
@@ -33,11 +33,18 @@ const ClinicDetailsPage: React.FC = () => {
     { text: clinic.klinikNavn },
   ];
 
-  const therapists = [
-    { name: "Therapist Name 1", specialty: "Speciality 1" },
-    { name: "Therapist Name 2", specialty: "Speciality 2" },
-    { name: "Therapist Name 3", specialty: "Speciality 3" },
-  ];
+  const generateTherapists = (count: number) => {
+    return Array.from({ length: count }, (_, index) => ({
+      name: `Therapist Name ${index + 1}`,
+      specialty: `Speciality ${index + 1}`,
+    }));
+  };
+
+  const therapistCount = parseInt(clinic.antalBehandlere, 10) || 0;
+  const therapists = generateTherapists(therapistCount);
+  const displayedTherapists = showAllTherapists
+    ? therapists
+    : therapists.slice(0, 5);
 
   return (
     <div>
@@ -138,20 +145,38 @@ const ClinicDetailsPage: React.FC = () => {
 
       <div className="mb-16">
         <h2 className="text-2xl font-semibold mb-6">
-          Behandlere ({clinic.antalBehandlere})
+          Behandlere {therapistCount > 0 && `(${therapistCount})`}
         </h2>
-        {therapists.map((therapist, index) => (
-          <div key={index} className="flex items-center mb-4">
-            <div className="bg-gray-200 w-[120px] h-[120px] rounded-lg mr-4 flex items-center justify-center">
-              <FaUser className="text-gray-400 text-5xl" />
+        {therapistCount > 0 ? (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {displayedTherapists.map((therapist, index) => (
+                <div key={index} className="flex items-center mb-4">
+                  <div className="bg-gray-200 w-[120px] h-[120px] rounded-lg mr-4 flex items-center justify-center">
+                    <FaUser className="text-gray-400 text-5xl" />
+                  </div>
+                  <div>
+                    <p className="font-semibold">{therapist.name}</p>
+                    <p className="text-gray-600">{therapist.specialty}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div>
-              <p className="font-semibold">{therapist.name}</p>
-              <p className="text-gray-600">{therapist.specialty}</p>
-            </div>
-          </div>
-        ))}
-        <button className="bg-blue-500 text-white px-4 py-2 rounded">
+            {therapists.length > 5 && !showAllTherapists && (
+              <button
+                className="text-blue-600 hover:text-blue-800 underline font-medium mt-4 mr-4"
+                onClick={() => setShowAllTherapists(true)}
+              >
+                Vis flere
+              </button>
+            )}
+          </>
+        ) : (
+          <p className="text-gray-600 italic">
+            Vi har ikke data på denne kliniks behandlere.
+          </p>
+        )}
+        <button className="bg-blue-500 text-white px-4 py-2 rounded mt-4">
           Jeg er behandler her, tilføj
         </button>
       </div>
