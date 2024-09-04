@@ -34,7 +34,7 @@ const ClinicDetailsPage: React.FC = () => {
   ];
 
   const therapists = [
-    { name: "Joachim Bograd", specialty: "Speciale: Skulder, ryg, lilletå" },
+    { name: "Therapist Name 1", specialty: "Speciality 1" },
     { name: "Therapist Name 2", specialty: "Speciality 2" },
     { name: "Therapist Name 3", specialty: "Speciality 3" },
   ];
@@ -142,17 +142,9 @@ const ClinicDetailsPage: React.FC = () => {
         </h2>
         {therapists.map((therapist, index) => (
           <div key={index} className="flex items-center mb-4">
-            {therapist.name === "Joachim Bograd" ? (
-              <img
-                src={joachimImage}
-                alt="Joachim Bograd"
-                className="w-[120px] h-[120px] rounded-lg mr-4 object-cover"
-              />
-            ) : (
-              <div className="bg-gray-200 w-[120px] h-[120px] rounded-lg mr-4 flex items-center justify-center">
-                <FaUser className="text-gray-400 text-5xl" />
-              </div>
-            )}
+            <div className="bg-gray-200 w-[120px] h-[120px] rounded-lg mr-4 flex items-center justify-center">
+              <FaUser className="text-gray-400 text-5xl" />
+            </div>
             <div>
               <p className="font-semibold">{therapist.name}</p>
               <p className="text-gray-600">{therapist.specialty}</p>
